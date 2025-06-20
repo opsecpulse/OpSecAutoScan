@@ -36,9 +36,74 @@
     <div class="output" id="discovery-output">Waiting for scan results...</div>
   </div>
 
-  <!-- Add more modules as needed -->
+<div class="module">
+  <h2>Recon Module</h2>
+  <div class="output" id="recon-output">Waiting for scan results...</div>
+</div>
+
+<div class="module">
+  <h2>Credential Access Module</h2>
+  <div class="output" id="cred-output">Waiting for scan results...</div>
+</div>
+
+<div class="module">
+  <h2>Discovery Module</h2>
+  <div class="output" id="discovery-output">Waiting for scan results...</div>
+</div>
+
+<div class="module">
+  <h2>Defense Evasion Module</h2>
+  <div class="output" id="defense-output">Waiting for scan results...</div>
+</div>
+
+<div class="module">
+  <h2>Exfiltration Module</h2>
+  <div class="output" id="exfil-output">Waiting for scan results...</div>
+</div>
+
+<div class="module">
+  <h2>Lateral Movement Module</h2>
+  <div class="output" id="lateral-output">Waiting for scan results...</div>
+</div>
+
+<div class="module">
+  <h2>SaaS Persistence Module</h2>
+  <div class="output" id="saas-output">Waiting for scan results...</div>
+</div>
 
   <script>
+fetch("results/recon.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("recon-output").textContent = data)
+  .catch(() => document.getElementById("recon-output").textContent = "No results yet.");
+fetch("results/credential_access.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("cred-output").textContent = data)
+  .catch(() => document.getElementById("cred-output").textContent = "No results yet.");
+fetch("results/discovery.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("discovery-output").textContent = data)
+  .catch(() => document.getElementById("discovery-output").textContent = "No results yet.");
+fetch("results/defense_evasion.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("defense-output").textContent = data)
+  .catch(() => document.getElementById("defense-output").textContent = "No results yet.");
+fetch("results/exfiltration.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("exfil-output").textContent = data)
+  .catch(() => document.getElementById("exfil-output").textContent = "No results yet.");
+fetch("results/lateral_movement.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("lateral-output").textContent = data)
+  .catch(() => document.getElementById("lateral-output").textContent = "No results yet.");
+fetch("results/saas_persistence.txt")
+  .then(res => res.text())
+  .then(data => document.getElementById("saas-output").textContent = data)
+  .catch(() => document.getElementById("saas-output").textContent = "No results yet.");
+fetch("results/recon.txt")
+  .then(response => response.text())
+  .then(data => document.getElementById("recon-output").textContent = data)
+  .catch(() => document.getElementById("recon-output").textContent = "No results yet.")
     // Placeholder for future dynamic loading
   </script>
 </body>
