@@ -4,20 +4,28 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Legal Disclaimer - OpSecAutoScan</title>
-<link href="style.css" rel="stylesheet" />
+<style>
+  body { background: #121212; color: #e0e0e0; font-family: Arial, sans-serif; margin: 0; }
+  nav { background: #111; padding: 1rem; }
+  nav a { color: #0ff; text-decoration: none; margin-right: 1rem; }
+  nav a.active, nav a:hover { text-decoration: underline; }
+  main { padding: 2rem; max-width: 700px; margin: auto; }
+  footer { text-align: center; padding: 1rem; color: #555; font-size: 0.9rem; }
+  a.email { color: #0af; }
+</style>
 </head>
 <body>
 <nav>
-  <a href="index.html">Home</a> | 
-  <a href="dashboard.html">Dashboard</a> | 
+  <a href="index.html">Home</a>
+  <a href="dashboard.html">Dashboard</a>
   <a href="legal.html" class="active">Legal</a>
 </nav>
-<main style="padding: 2rem; color: #e0e0e0;">
+<main>
   <h1>Legal Disclaimer</h1>
   <p>This tool is intended for <strong>educational and authorized testing purposes only</strong>. Unauthorized use on systems without permission is illegal and strictly prohibited.</p>
   <p>Use responsibly.</p>
-  <p>Contact: <a href="mailto:contact@opsecpulse.com">contact@opsecpulse.com</a></p>
+  <p>Contact: <a class="email" href="mailto:contact@opsecpulse.com">contact@opsecpulse.com</a></p>
 </main>
-<footer style="text-align:center; margin-top:2rem; color:#666;">© 2025 OpSecPulse</footer>
+<footer>© 2025 OpSecPulse</footer>
 </body>
 </html>
