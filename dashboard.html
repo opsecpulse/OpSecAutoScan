@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OpSecAutoScan Dashboard</title>
+  <style>
+    body { background: #111; color: #eee; font-family: monospace; padding: 2rem; }
+    h1 { color: #0ff; }
+    .module { border-left: 4px solid #0ff; padding: 1rem; margin-bottom: 1rem; }
+    .module h2 { margin: 0; }
+    .output { background: #222; padding: 1rem; margin-top: 0.5rem; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h1>OpSecAutoScan Dashboard</h1>
+
+  <div class="module">
+    <h2>Recon Module</h2>
+    <div class="output" id="recon-output">Waiting for scan results...</div>
+  </div>
+
+  <div class="module">
+    <h2>Credential Access Module</h2>
+    <div class="output" id="cred-output">Waiting for scan results...</div>
+  </div>
+
+  <div class="module">
+    <h2>Discovery Module</h2>
+    <div class="output" id="discovery-output">Waiting for scan results...</div>
+  </div>
+
+  <!-- Add more modules as needed -->
+
+  <script>
+    // Example: Load scan results from local files or APIs (placeholder)
+    // Here you can implement AJAX fetch calls to update outputs dynamically
+    // For now, static placeholders
+  </script>
+</body>
+</html>
