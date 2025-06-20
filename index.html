@@ -33,5 +33,14 @@
     <h2>🎯 Live Repository:</h2>
     <p><a href="https://github.com/opsecpulse/OpSecAutoScan" target="_blank">GitHub Source Code</a></p>
   </div>
+<form id="scan-form" style="margin:20px 0;"><input type="text" id="domain-input" placeholder="Enter domain or IP" required style="padding:8px; width:250px;"><button type="submit" style="padding:8px 12px; margin-left:8px;">Run Scan</button></form><script>document.getElementById("scan-form").onsubmit=function(e){e.preventDefault();const domain=document.getElementById("domain-input").value;alert(`Run scans with:
+python3 run_pipeline.py recon ${domain}
+python3 run_pipeline.py cred ${domain}
+...etc.`);};</script>
+<form id="scan-form" style="margin:20px 0;"><input type="text" id="domain-input" placeholder="Enter domain or IP" required style="padding:8px; width:250px;"><button type="submit" style="padding:8px 12px; margin-left:8px;">Run Scan</button></form><script>document.getElementById("scan-form").onsubmit=function(e){e.preventDefault();const domain=document.getElementById("domain-input").value;alert(`Run scans with:
+python3 run_pipeline.py recon ${domain}
+python3 run_pipeline.py cred ${domain}
+...etc.`);};</script>
+<footer style="text-align:center; padding:10px; font-size:12px;"><a href="Legal.md" target="_blank" rel="noopener noreferrer">Legal Disclaimer</a></footer>
 </body>
 </html>
