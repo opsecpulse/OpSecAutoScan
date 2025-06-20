@@ -43,5 +43,17 @@ python3 run_pipeline.py cred ${domain}
 ...etc.`);};</script>
 <footer style="text-align:center; padding:10px; font-size:12px;"><a href="Legal.md" target="_blank" rel="noopener noreferrer">Legal Disclaimer</a></footer>
 <footer style="text-align:center; padding:10px; font-size:12px;"><a href="Legal.md" target="_blank" rel="noopener noreferrer">Legal Disclaimer</a></footer>
+<div style="margin:20px;">
+  <input id="domain-input" placeholder="Enter domain or IP" style="padding:8px; width:250px;" />
+  <div style="margin-top:10px;">
+    <button onclick="alert(`Run: python3 run_pipeline.py recon ${document.getElementById('domain-input').value}`)">Recon</button>
+    <button onclick="alert(`Run: python3 run_pipeline.py cred ${document.getElementById('domain-input').value}`)">Credential Access</button>
+    <button onclick="alert(`Run: python3 run_pipeline.py discovery ${document.getElementById('domain-input').value}`)">Discovery</button>
+    <button onclick="alert(`Run: python3 run_pipeline.py evasion ${document.getElementById('domain-input').value}`)">Evasion</button>
+    <button onclick="alert(`Run: python3 run_pipeline.py exfil ${document.getElementById('domain-input').value}`)">Exfiltration</button>
+    <button onclick="alert(`Run: python3 run_pipeline.py lateral ${document.getElementById('domain-input').value}`)">Lateral Movement</button>
+    <button onclick="alert(`Run: python3 run_pipeline.py privesc ${document.getElementById('domain-input').value}`)">Privilege Escalation</button>
+  </div>
+</div>
 </body>
 </html>
