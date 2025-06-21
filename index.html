@@ -5,71 +5,62 @@
 <title>OpSecAutoScan Home</title>
 <style>
   body { background: #111; color: #0ff; font-family: monospace; padding: 20px; }
-  nav a { color: #0ff; margin-right: 10px; text-decoration: none; }
-  nav a:hover { text-decoration: underline; }
   .module { border-left: 4px solid #0ff; margin-bottom: 20px; padding-left: 10px; }
-  h2 { color: #0af; }
-  pre { background: #222; padding: 10px; white-space: pre-wrap; word-wrap: break-word; max-height: 200px; overflow-y: auto; }
-  footer { border-top: 1px solid #333; margin-top: 30px; padding-top: 10px; font-size: 0.8em; color: #666; }
-  input, button { padding: 8px; font-size: 1em; }
-  button { background: #0ff; border: none; cursor: pointer; margin-left: 10px; }
-  button:hover { background: #0cc; }
+  input, button { padding: 8px; margin-top: 10px; }
+  button { background: #0ff; border: none; cursor: pointer; }
 </style>
+<script>
+function goToDashboard() {
+  const domain = document.getElementById('domain-input').value.trim();
+  if(domain) {
+    window.location.href = 'dashboard.html?domain=' + encodeURIComponent(domain);
+  } else {
+    alert('Please enter a domain or IP to scan.');
+  }
+}
+</script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a> | 
-    <a href="dashboard.html">Dashboard</a> | 
-    <a href="legal.html">Legal</a>
-  </nav>
 
-  <h1>OpSecAutoScan Home</h1>
+<h1>OpSecAutoScan Home</h1>
 
-  <div class="module">
-    <h2>Recon Module</h2>
-    <pre id="recon-results">Subdomain enumeration and email enumeration results will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Recon Module</h2>
+  <p>Subdomain enumeration and email enumeration results will appear here...</p>
+</div>
 
-  <div class="module">
-    <h2>Privilege Escalation Module</h2>
-    <pre id="privesc-results">OAuth abuse, mail rule injection, SAML jacking results will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Privilege Escalation Module</h2>
+  <p>OAuth abuse, mail rule injection, SAML jacking results will appear here...</p>
+</div>
 
-  <div class="module">
-    <h2>Credential Access Module</h2>
-    <pre id="cred-results">Detected API keys, secrets, and tokens will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Credential Access Module</h2>
+  <p>Detected API keys, secrets, and tokens will appear here...</p>
+</div>
 
-  <div class="module">
-    <h2>Discovery Module</h2>
-    <pre id="discovery-results">Accessible paths and files discovered will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Discovery Module</h2>
+  <p>Accessible paths and files discovered will appear here...</p>
+</div>
 
-  <div class="module">
-    <h2>Evasion Module</h2>
-    <pre id="evasion-results">Stolen cookies and evasion results will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Evasion Module</h2>
+  <p>Stolen cookies and evasion results will appear here...</p>
+</div>
 
-  <div class="module">
-    <h2>Exfiltration Module</h2>
-    <pre id="exfiltration-results">Triggered webhooks and exfiltration results will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Exfiltration Module</h2>
+  <p>Triggered webhooks and exfiltration results will appear here...</p>
+</div>
 
-  <div class="module">
-    <h2>Lateral Movement Module</h2>
-    <pre id="lateral-results">OAuth integration abuse and lateral movement results will appear here...</pre>
-  </div>
+<div class="module">
+  <h2>Lateral Movement Module</h2>
+  <p>OAuth integration abuse and lateral movement results will appear here...</p>
+</div>
 
-  <div style="margin-top: 20px;">
-    <input id="domain-input-home" placeholder="Enter domain or IP" />
-    <button onclick="alert('Run scan: python3 run_pipeline.py recon ' + document.getElementById('domain-input-home').value)">Run Scan</button>
-  </div>
-
-  <footer>
-    <p><strong>Legal Disclaimer:</strong> This tool is intended for <em>educational and authorized testing purposes only</em>. Unauthorized use on systems without permission is illegal and strictly prohibited.</p>
-    <p>Use responsibly. Contact: <a href="mailto:contact@opsecpulse.com">contact@opsecpulse.com</a></p>
-    <p>© 2025 OpSecPulse</p>
-  </footer>
+<input id="domain-input" placeholder="Enter domain or IP" />
+<button onclick="goToDashboard()">Run Scan</button>
 
 </body>
 </html>
