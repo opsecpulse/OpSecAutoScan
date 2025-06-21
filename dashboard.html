@@ -107,5 +107,7 @@ fetch("results/recon.txt")
   .catch(() => document.getElementById("recon-output").textContent = "No results yet.")
     // Placeholder for future dynamic loading
   </script>
+<script>const modules=["recon","credential_access","discovery","evasion","exfiltration","lateral_movement","privesc"];modules.forEach(m=>{fetch(`results/${m}.json`).then(r=>r.json()).then(data=>{document.getElementById(`${m}-results`).textContent=data.join("
+")}).catch(e=>{document.getElementById(`${m}-results`).textContent="Error loading data"});});</script>
 </body>
 </html>
